@@ -185,23 +185,6 @@
 <text x="-10.541" y="-2.921" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 <text x="-7.493" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="TO92" urn="urn:adsk.eagle:footprint:16150/1">
-<description>&lt;b&gt;TO-92&lt;/b&gt;</description>
-<wire x1="-2.095" y1="-1.651" x2="-0.7869" y2="2.5484" width="0.1524" layer="21" curve="-111.097684"/>
-<wire x1="0.7869" y1="2.5484" x2="2.095" y2="-1.651" width="0.1524" layer="21" curve="-111.097684"/>
-<wire x1="-2.095" y1="-1.651" x2="2.095" y2="-1.651" width="0.1524" layer="21"/>
-<wire x1="-2.254" y1="-0.254" x2="-0.286" y2="-0.254" width="0.1524" layer="51"/>
-<wire x1="-2.655" y1="-0.254" x2="-2.254" y2="-0.254" width="0.1524" layer="21"/>
-<wire x1="-0.286" y1="-0.254" x2="0.286" y2="-0.254" width="0.1524" layer="21"/>
-<wire x1="2.254" y1="-0.254" x2="2.655" y2="-0.254" width="0.1524" layer="21"/>
-<wire x1="0.286" y1="-0.254" x2="2.254" y2="-0.254" width="0.1524" layer="51"/>
-<wire x1="-0.7864" y1="2.5484" x2="0.7864" y2="2.5484" width="0.1524" layer="51" curve="-34.298964"/>
-<pad name="1" x="-1.27" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="0" y="1.905" drill="0.8128" shape="octagon"/>
-<pad name="3" x="1.27" y="0" drill="0.8128" shape="octagon"/>
-<text x="2.413" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="2.921" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-</package>
 <package name="IN-8">
 <description>May be used with socket: &lt;b&gt;11-pin- Russian&lt;/b&gt;</description>
 <pad name="7" x="-2.375" y="-4.11" drill="0.75"/>
@@ -222,24 +205,6 @@
 <text x="0" y="10" size="1.27" layer="21" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-10" size="1.27" layer="21" align="top-center">&gt;VALUE</text>
 </package>
-<package name="NIXIE-PSU">
-<pad name="1" x="-5.08" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="4" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="5" x="5.08" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-6.4262" y="14.5288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-6.35" y="1.905" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
-<rectangle x1="-5.334" y1="-0.254" x2="-4.826" y2="0.254" layer="51"/>
-<rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
-<wire x1="-8.89" y1="-2.54" x2="8.89" y2="-2.54" width="0.127" layer="21"/>
-<wire x1="8.89" y1="-2.54" x2="8.89" y2="16.51" width="0.127" layer="21"/>
-<wire x1="8.89" y1="16.51" x2="-8.89" y2="16.51" width="0.127" layer="21"/>
-<wire x1="-8.89" y1="16.51" x2="-8.89" y2="-2.54" width="0.127" layer="21"/>
-</package>
 <package name="INS-3" urn="urn:adsk.eagle:footprint:22309/1" locally_modified="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <pad name="C" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
@@ -256,6 +221,41 @@
 <wire x1="1.27" y1="-2.54" x2="0.635" y2="-1.905" width="0.127" layer="21"/>
 <wire x1="1.27" y1="-2.54" x2="0.635" y2="-3.175" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="3.65" width="0.127" layer="21"/>
+</package>
+<package name="TO92" urn="urn:adsk.eagle:footprint:16150/1">
+<description>&lt;b&gt;TO-92&lt;/b&gt;</description>
+<wire x1="-2.095" y1="-1.651" x2="-0.7869" y2="2.5484" width="0.1524" layer="21" curve="-111.097684"/>
+<wire x1="0.7869" y1="2.5484" x2="2.095" y2="-1.651" width="0.1524" layer="21" curve="-111.097684"/>
+<wire x1="-2.095" y1="-1.651" x2="2.095" y2="-1.651" width="0.1524" layer="21"/>
+<wire x1="-2.254" y1="-0.254" x2="-0.286" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-2.655" y1="-0.254" x2="-2.254" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-0.286" y1="-0.254" x2="0.286" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="2.254" y1="-0.254" x2="2.655" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="0.286" y1="-0.254" x2="2.254" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.7864" y1="2.5484" x2="0.7864" y2="2.5484" width="0.1524" layer="51" curve="-34.298964"/>
+<pad name="1" x="-1.27" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="0" y="1.905" drill="0.8128" shape="octagon"/>
+<pad name="3" x="1.27" y="0" drill="0.8128" shape="octagon"/>
+<text x="2.413" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="2.921" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="NIXIE-PSU">
+<pad name="1" x="-5.08" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="3" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="4" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="5" x="5.08" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-6.4262" y="14.5288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-6.35" y="1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
+<rectangle x1="-5.334" y1="-0.254" x2="-4.826" y2="0.254" layer="51"/>
+<rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
+<wire x1="-8.001" y1="-2.54" x2="8.001" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="8.001" y1="-2.54" x2="8.001" y2="16.51" width="0.127" layer="21"/>
+<wire x1="8.001" y1="16.51" x2="-8.001" y2="16.51" width="0.127" layer="21"/>
+<wire x1="-8.001" y1="16.51" x2="-8.001" y2="-2.54" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -282,6 +282,42 @@
 <pin name="9" x="12.7" y="-12.7" length="short" rot="R180"/>
 <text x="0" y="2.54" size="1.6764" layer="95" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.54" size="1.6764" layer="95" align="top-center">&gt;VALUE</text>
+</symbol>
+<symbol name="NIXIE-0-9">
+<wire x1="-7.62" y1="-10.795" x2="-7.62" y2="13.335" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="-10.795" x2="5.08" y2="-10.795" width="0.4064" layer="94" curve="180"/>
+<wire x1="5.08" y1="-10.795" x2="5.08" y2="0" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="13.335" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="13.335" x2="5.08" y2="13.335" width="0.4064" layer="94" curve="-180"/>
+<text x="-1.2954" y="20.32" size="1.778" layer="95" align="bottom-center">&gt;NAME</text>
+<pin name="1" x="-10.16" y="10.16" visible="pin" length="short"/>
+<pin name="2" x="-10.16" y="7.62" visible="pin" length="short"/>
+<pin name="3" x="-10.16" y="5.08" visible="pin" length="short"/>
+<pin name="4" x="-10.16" y="2.54" visible="pin" length="short"/>
+<pin name="5" x="-10.16" y="0" visible="pin" length="short"/>
+<pin name="6" x="-10.16" y="-2.54" visible="pin" length="short"/>
+<pin name="7" x="-10.16" y="-5.08" visible="pin" length="short"/>
+<pin name="8" x="-10.16" y="-7.62" visible="pin" length="short"/>
+<pin name="9" x="-10.16" y="-10.16" visible="pin" length="short"/>
+<pin name="0" x="-10.16" y="12.7" visible="pin" length="short"/>
+<pin name="A" x="7.62" y="0" visible="pin" length="short" rot="R180"/>
+<text x="-1.27" y="-17.78" size="1.6764" layer="96" align="top-center">&gt;VALUE</text>
+<wire x1="5.08" y1="0" x2="3.556" y2="0" width="0.254" layer="94"/>
+<wire x1="3.556" y1="0" x2="3.556" y2="12.7" width="0.254" layer="94"/>
+<wire x1="3.556" y1="0" x2="3.556" y2="-10.16" width="0.254" layer="94"/>
+</symbol>
+<symbol name="NIXIE-DOT">
+<circle x="0" y="0" radius="5.08" width="0.254" layer="94"/>
+<pin name="A" x="0" y="7.62" visible="pin" length="short" rot="R270"/>
+<pin name="C" x="0" y="-7.62" visible="pin" length="short" rot="R90"/>
+<wire x1="0" y1="5.08" x2="0" y2="3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="3.81" x2="-1.27" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="3.81" x2="0" y2="3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="3.81" x2="1.27" y2="3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-4.318" width="0.254" layer="94"/>
+<circle x="0" y="-3.81" radius="0.567959375" width="0.254" layer="94"/>
+<text x="-5.588" y="-5.08" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.588" y="-5.08" size="1.778" layer="96" rot="R90" align="top-left">&gt;VALUE</text>
 </symbol>
 <symbol name="N-MOSFET">
 <wire x1="-2.54" y1="-2.54" x2="-1.2192" y2="-2.54" width="0.1524" layer="94"/>
@@ -323,29 +359,6 @@
 <vertex x="1.27" y="-0.762"/>
 </polygon>
 </symbol>
-<symbol name="NIXIE-0-9">
-<wire x1="-7.62" y1="-10.795" x2="-7.62" y2="13.335" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="-10.795" x2="5.08" y2="-10.795" width="0.4064" layer="94" curve="180"/>
-<wire x1="5.08" y1="-10.795" x2="5.08" y2="0" width="0.4064" layer="94"/>
-<wire x1="5.08" y1="0" x2="5.08" y2="13.335" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="13.335" x2="5.08" y2="13.335" width="0.4064" layer="94" curve="-180"/>
-<text x="-1.2954" y="20.32" size="1.778" layer="95" align="bottom-center">&gt;NAME</text>
-<pin name="1" x="-10.16" y="10.16" visible="pin" length="short"/>
-<pin name="2" x="-10.16" y="7.62" visible="pin" length="short"/>
-<pin name="3" x="-10.16" y="5.08" visible="pin" length="short"/>
-<pin name="4" x="-10.16" y="2.54" visible="pin" length="short"/>
-<pin name="5" x="-10.16" y="0" visible="pin" length="short"/>
-<pin name="6" x="-10.16" y="-2.54" visible="pin" length="short"/>
-<pin name="7" x="-10.16" y="-5.08" visible="pin" length="short"/>
-<pin name="8" x="-10.16" y="-7.62" visible="pin" length="short"/>
-<pin name="9" x="-10.16" y="-10.16" visible="pin" length="short"/>
-<pin name="0" x="-10.16" y="12.7" visible="pin" length="short"/>
-<pin name="A" x="7.62" y="0" visible="pin" length="short" rot="R180"/>
-<text x="-1.27" y="-17.78" size="1.6764" layer="96" align="top-center">&gt;VALUE</text>
-<wire x1="5.08" y1="0" x2="3.556" y2="0" width="0.254" layer="94"/>
-<wire x1="3.556" y1="0" x2="3.556" y2="12.7" width="0.254" layer="94"/>
-<wire x1="3.556" y1="0" x2="3.556" y2="-10.16" width="0.254" layer="94"/>
-</symbol>
 <symbol name="NIXIE-PSU">
 <wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
@@ -355,19 +368,6 @@
 <pin name="GND" x="0" y="-10.16" visible="pin" length="short" rot="R90"/>
 <pin name="OUT" x="10.16" y="0" visible="pin" length="short" rot="R180"/>
 <pin name="EN" x="0" y="10.16" visible="pin" length="short" rot="R270"/>
-</symbol>
-<symbol name="NIXIE-DOT">
-<circle x="0" y="0" radius="5.08" width="0.254" layer="94"/>
-<pin name="A" x="0" y="7.62" visible="pin" length="short" rot="R270"/>
-<pin name="C" x="0" y="-7.62" visible="pin" length="short" rot="R90"/>
-<wire x1="0" y1="5.08" x2="0" y2="3.81" width="0.254" layer="94"/>
-<wire x1="0" y1="3.81" x2="-1.27" y2="3.81" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="3.81" x2="0" y2="3.81" width="0.254" layer="94"/>
-<wire x1="0" y1="3.81" x2="1.27" y2="3.81" width="0.254" layer="94"/>
-<wire x1="0" y1="-5.08" x2="0" y2="-4.318" width="0.254" layer="94"/>
-<circle x="0" y="-3.81" radius="0.567959375" width="0.254" layer="94"/>
-<text x="-5.588" y="-5.08" size="1.778" layer="95" rot="R90">&gt;NAME</text>
-<text x="5.588" y="-5.08" size="1.778" layer="96" rot="R90" align="top-left">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -401,23 +401,6 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="VN2224" prefix="Q">
-<gates>
-<gate name="G$1" symbol="N-MOSFET" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TO92">
-<connects>
-<connect gate="G$1" pin="D" pad="3"/>
-<connect gate="G$1" pin="G" pad="2"/>
-<connect gate="G$1" pin="S" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="IN-8" prefix="T">
 <gates>
 <gate name="G$1" symbol="NIXIE-0-9" x="0" y="0"/>
@@ -443,6 +426,39 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="INS-3" prefix="T">
+<gates>
+<gate name="G$1" symbol="NIXIE-DOT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="INS-3">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SSN1N45BTA">
+<gates>
+<gate name="G$1" symbol="N-MOSFET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO92">
+<connects>
+<connect gate="G$1" pin="D" pad="2"/>
+<connect gate="G$1" pin="G" pad="3"/>
+<connect gate="G$1" pin="S" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="NIXIE-PSU">
 <gates>
 <gate name="G$1" symbol="NIXIE-PSU" x="0" y="0"/>
@@ -454,22 +470,6 @@
 <connect gate="G$1" pin="GND" pad="2 4"/>
 <connect gate="G$1" pin="IN" pad="1"/>
 <connect gate="G$1" pin="OUT" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="INS-3" prefix="T">
-<gates>
-<gate name="G$1" symbol="NIXIE-DOT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="INS-3">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6375,22 +6375,19 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="TP_5V" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1"/>
 <part name="TP_170V" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-13" package3d_urn="urn:adsk.eagle:package:27946/1"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="GND_4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND_5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="DATA" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X17" device="" package3d_urn="urn:adsk.eagle:package:22490/2"/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND_6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="Q1" library="Nixie" deviceset="VN2224" device=""/>
 <part name="HOUR1" library="Nixie" deviceset="IN-8" device=""/>
 <part name="HOUR2" library="Nixie" deviceset="IN-8" device=""/>
 <part name="MINUTE1" library="Nixie" deviceset="IN-8" device=""/>
 <part name="MINUTE2" library="Nixie" deviceset="IN-8" device=""/>
-<part name="U$1" library="Nixie" deviceset="NIXIE-PSU" device=""/>
 <part name="T1" library="Nixie" deviceset="INS-3" device=""/>
 <part name="POWER" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
-<part name="JACK" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="/90" package3d_urn="urn:adsk.eagle:package:22437/2"/>
+<part name="U$1" library="Nixie" deviceset="SSN1N45BTA" device=""/>
+<part name="U$2" library="Nixie" deviceset="NIXIE-PSU" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6451,12 +6448,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="P+2" gate="1" x="129.54" y="27.94" smashed="yes" rot="R90">
 <attribute name="VALUE" x="134.62" y="25.4" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="P+4" gate="1" x="127" y="154.94" smashed="yes" rot="R90">
-<attribute name="VALUE" x="127" y="157.48" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="GND_4" gate="1" x="127" y="152.4" smashed="yes" rot="R270">
-<attribute name="VALUE" x="124.46" y="154.94" size="1.778" layer="96" rot="R270"/>
-</instance>
 <instance part="P+5" gate="1" x="182.88" y="134.62" smashed="yes">
 <attribute name="VALUE" x="180.34" y="129.54" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -6472,10 +6463,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </instance>
 <instance part="GND_6" gate="1" x="144.78" y="116.84" smashed="yes">
 <attribute name="VALUE" x="142.24" y="114.3" size="1.778" layer="96"/>
-</instance>
-<instance part="Q1" gate="G$1" x="337.82" y="63.5" smashed="yes">
-<attribute name="VALUE" x="326.39" y="63.5" size="1.778" layer="96"/>
-<attribute name="NAME" x="326.39" y="66.04" size="1.778" layer="95"/>
 </instance>
 <instance part="HOUR1" gate="G$1" x="162.56" y="86.36" smashed="yes" rot="R90">
 <attribute name="NAME" x="142.24" y="85.0646" size="1.778" layer="95" rot="R90" align="bottom-center"/>
@@ -6493,7 +6480,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="279.4" y="85.0646" size="1.778" layer="95" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="317.5" y="85.09" size="1.6764" layer="96" rot="R90" align="top-center"/>
 </instance>
-<instance part="U$1" gate="G$1" x="144.78" y="134.62" smashed="yes"/>
 <instance part="T1" gate="G$1" x="340.36" y="83.82" smashed="yes">
 <attribute name="NAME" x="334.772" y="78.74" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="345.948" y="78.74" size="1.778" layer="96" rot="R90" align="top-left"/>
@@ -6502,10 +6488,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="186.69" y="132.715" size="1.778" layer="95"/>
 <attribute name="VALUE" x="186.69" y="121.92" size="1.778" layer="96"/>
 </instance>
-<instance part="JACK" gate="G$1" x="167.64" y="152.4" smashed="yes">
-<attribute name="NAME" x="161.29" y="158.115" size="1.778" layer="95"/>
-<attribute name="VALUE" x="161.29" y="147.32" size="1.778" layer="96"/>
+<instance part="U$1" gate="G$1" x="337.82" y="63.5" smashed="yes">
+<attribute name="VALUE" x="326.39" y="63.5" size="1.778" layer="96"/>
+<attribute name="NAME" x="326.39" y="66.04" size="1.778" layer="95"/>
 </instance>
+<instance part="U$2" gate="G$1" x="144.78" y="134.62" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -6539,12 +6526,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="137.16" y1="12.7" x2="137.16" y2="10.16" width="0.1524" layer="91"/>
 <junction x="137.16" y="10.16"/>
 <wire x1="340.36" y1="58.42" x2="340.36" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="S"/>
-</segment>
-<segment>
-<pinref part="GND_4" gate="1" pin="GND"/>
-<wire x1="165.1" y1="152.4" x2="129.54" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="JACK" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <wire x1="190.5" y1="127" x2="182.88" y2="127" width="0.1524" layer="91"/>
@@ -6553,9 +6535,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="POWER" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
-<wire x1="144.78" y1="124.46" x2="144.78" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
 <pinref part="GND_6" gate="1" pin="GND"/>
+<wire x1="144.78" y1="119.38" x2="144.78" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -7086,11 +7068,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="137.16" y="27.94"/>
 </segment>
 <segment>
-<pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="165.1" y1="154.94" x2="129.54" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="JACK" gate="G$1" pin="1"/>
-</segment>
-<segment>
 <pinref part="P+5" gate="1" pin="+5V"/>
 <wire x1="182.88" y1="132.08" x2="182.88" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="129.54" x2="190.5" y2="129.54" width="0.1524" layer="91"/>
@@ -7099,7 +7076,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <wire x1="134.62" y1="134.62" x2="129.54" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="P+6" gate="1" pin="+5V"/>
-<pinref part="U$1" gate="G$1" pin="IN"/>
+<pinref part="U$2" gate="G$1" pin="IN"/>
 </segment>
 </net>
 <net name="N$55" class="3">
@@ -7112,15 +7089,15 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <net name="N$1" class="0">
 <segment>
 <wire x1="340.36" y1="68.58" x2="340.36" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="D"/>
 <pinref part="T1" gate="G$1" pin="C"/>
+<pinref part="U$1" gate="G$1" pin="D"/>
 </segment>
 </net>
 <net name="DOT" class="0">
 <segment>
 <wire x1="332.74" y1="60.96" x2="327.66" y2="60.96" width="0.1524" layer="91"/>
 <label x="327.66" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="Q1" gate="G$1" pin="G"/>
+<pinref part="U$1" gate="G$1" pin="G"/>
 </segment>
 <segment>
 <pinref part="DATA" gate="G$1" pin="9"/>
@@ -7132,7 +7109,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <wire x1="154.94" y1="134.62" x2="160.02" y2="134.62" width="0.1524" layer="91"/>
 <label x="160.02" y="134.62" size="1.778" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="OUT"/>
+<pinref part="U$2" gate="G$1" pin="OUT"/>
 </segment>
 <segment>
 <wire x1="132.08" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91"/>
