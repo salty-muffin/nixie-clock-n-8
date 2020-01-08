@@ -18469,7 +18469,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="J1" gate="G$1" pin="C"/>
 <pinref part="GND_1" gate="1" pin="GND"/>
-<wire x1="22.86" y1="43.18" x2="27.94" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="43.18" x2="25.4" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="B"/>
+<wire x1="25.4" y1="43.18" x2="27.94" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="45.72" x2="25.4" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="45.72" x2="25.4" y2="43.18" width="0.1524" layer="91"/>
+<junction x="25.4" y="43.18"/>
 </segment>
 </net>
 <net name="HOUR1_A" class="0">
