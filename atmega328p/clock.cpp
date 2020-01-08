@@ -119,9 +119,9 @@ uint8_t Clock::updateButtons()
   button_2.update();
   button_3.update();
 
-  if (button_1.rose() || button_1.fell()) return pressed_1;
-  if (button_2.rose() || button_2.fell()) return pressed_2;
-  if (button_3.rose() || button_3.fell()) return pressed_3;
+  if (button_1.fell()) return pressed_1;
+  if (button_2.fell()) return pressed_2;
+  if (button_3.fell()) return pressed_3;
   return 0;
 }
 
