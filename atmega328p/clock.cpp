@@ -48,16 +48,16 @@ void Clock::init(uint8_t data, uint8_t clock, uint8_t latch, uint8_t dot,
     delay(800);
 
     // debug
-    //Serial.println("cannot connect. reattempting...");
+    Serial.println("cannot connect. reattempting...");
   }
   // if connected -> turn dot on and start rtc
   while (!real_time.deviceStatus())
   {
-    //Serial.println("Oscillator is off, turning it on.");
+    Serial.println("Oscillator is off, turning it on.");
     bool deviceStatus = real_time.deviceStart();
     if (!deviceStatus)
     {
-      //Serial.println("Oscillator did not start, trying again.");
+      Serial.println("Oscillator did not start, trying again.");
 
       this->display(counter, counter);
       if (++counter > 99) counter = 0;
@@ -71,7 +71,7 @@ void Clock::init(uint8_t data, uint8_t clock, uint8_t latch, uint8_t dot,
   digitalWrite(pin_dot, HIGH);
 
   // debug
-  //Serial.println("connected");
+  Serial.println("connected");
 
   // update and display the time
   this->updateTime();
@@ -84,9 +84,9 @@ bool Clock::updateTime()
   now = real_time.now();
 
   // debug
-  //Serial.println("H: " + String(now.hour()) +
-  //             "\tM: " + String(now.minute()) +
-  //             "\tS: " + String(now.second()));
+  Serial.println("H: " + String(now.hour()) +
+                 "\tM: " + String(now.minute()) +
+                 "\tS: " + String(now.second()));
 
   // return true if time has changed
   if (now.minute() != last.minute() || now.hour() != last.hour()) // if time changed
