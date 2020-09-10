@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -157,7 +157,7 @@
 <board>
 <plain>
 <text x="95.885" y="1.905" size="1.778" layer="25" font="vector" align="center">ZENO GRIES</text>
-<text x="13.335" y="1.905" size="1.778" layer="25" font="vector" align="center">R1.2</text>
+<text x="13.335" y="1.905" size="1.778" layer="25" font="vector" align="center">R1.3</text>
 <hole x="5.08" y="40.64" drill="3.3"/>
 <wire x1="-1.44" y1="-4.07" x2="114.47" y2="-4.07" width="0.1524" layer="47"/>
 <wire x1="-1.44" y1="-4.07" x2="-1.44" y2="56.14" width="0.1524" layer="47"/>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="100" unitdist="mil" unit="mil" style="dots" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
+<grid distance="25" unitdist="mil" unit="mil" style="dots" multiple="1" display="yes" altdistance="10" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -162,7 +162,7 @@
 <text x="73.025" y="33.02" size="1.778" layer="25" font="vector" align="center">IN-8</text>
 <text x="95.25" y="33.02" size="1.778" layer="25" font="vector" align="center">IN-8</text>
 <text x="95.885" y="1.905" size="1.778" layer="25" font="vector" align="center">ZENO GRIES</text>
-<text x="13.97" y="1.905" size="1.778" layer="25" font="vector" align="center">R1.2.1</text>
+<text x="12.7" y="1.905" size="1.778" layer="25" font="vector" align="center">R1.3</text>
 <wire x1="88.265" y1="38.735" x2="94.615" y2="48.895" width="0.1524" layer="21"/>
 <wire x1="94.615" y1="48.895" x2="100.965" y2="38.735" width="0.1524" layer="21"/>
 <wire x1="100.965" y1="38.735" x2="88.265" y2="38.735" width="0.1524" layer="21"/>
@@ -181,8 +181,8 @@
 <wire x1="19.3802" y1="40.8686" x2="19.05" y2="40.005" width="0.1524" layer="21"/>
 <wire x1="19.05" y1="40.005" x2="18.1356" y2="40.386" width="0.1524" layer="21"/>
 <text x="27.305" y="47.625" size="1.27" layer="25" font="vector" align="center">HIGH VOLTAGE!</text>
-<text x="58.42" y="40.005" size="1.27" layer="21" font="vector" align="center">POWER SUPPLY</text>
-<text x="51.435" y="45.085" size="1.27" layer="21" font="vector" align="center">5V</text>
+<text x="58.674" y="40.005" size="1.27" layer="21" font="vector" align="center">POWER SUPPLY</text>
+<text x="53.086" y="45.085" size="1.27" layer="21" font="vector" align="center">5V</text>
 <text x="27.305" y="45.085" size="1.27" layer="25" font="vector" align="center">DANGER!</text>
 <text x="85.725" y="45.085" size="1.27" layer="25" font="vector" align="center">DANGER!</text>
 <wire x1="-1.48" y1="-4.07" x2="-1.48" y2="56.14" width="0.1524" layer="47"/>
