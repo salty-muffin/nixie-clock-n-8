@@ -2,18 +2,10 @@
 
 // methods ---------------------------------------------------------------------
 void Clock::init(uint8_t data, uint8_t clock, uint8_t latch, uint8_t dot,
-                 uint8_t switch_1, uint8_t switch_2, uint8_t switch_3, uint16_t debounce,
-                 uint8_t tube_table[][4])
+                 uint8_t switch_1, uint8_t switch_2, uint8_t switch_3, uint16_t debounce)
 {
   // set variables
   pin_dot = dot;
-
-  // transfer tube_table to member table
-  for (uint8_t i = 0; i < 11; i++)
-  {
-    for (uint8_t j = 0; j < 4; j++)
-      table[i][j] = tube_table[i][j];
-  }
 
   // set pin mode
   pinMode(pin_dot, OUTPUT);
@@ -39,7 +31,7 @@ void Clock::init(uint8_t data, uint8_t clock, uint8_t latch, uint8_t dot,
   while (!real_time.begin())
   {
     // count
-    this->display(counter, counter);
+    this->display(counter, counter, true, true);
     if (++counter > 99) counter = 0;
     // and blink fast
     digitalWrite(pin_dot, HIGH);
@@ -59,7 +51,7 @@ void Clock::init(uint8_t data, uint8_t clock, uint8_t latch, uint8_t dot,
     {
       Serial.println("Oscillator did not start, trying again.");
 
-      this->display(counter, counter);
+      this->display(counter, counter, true, true);
       if (++counter > 99) counter = 0;
       // and blink fast
       digitalWrite(pin_dot, HIGH);
@@ -81,17 +73,17 @@ void Clock::init(uint8_t data, uint8_t clock, uint8_t latch, uint8_t dot,
 bool Clock::updateTime()
 {
   // get time from rtc
-  now = real_time.now();
+  now_time = real_time.now();
 
   // debug
-  Serial.println("H: " + String(now.hour()) +
-                 "\tM: " + String(now.minute()) +
-                 "\tS: " + String(now.second()));
+  Serial.println("H: " + String(now_time.hour()) +
+                 "\tM: " + String(now_time.minute()) +
+                 "\tS: " + String(now_time.second()));
 
   // return true if time has changed
-  if (now.minute() != last.minute() || now.hour() != last.hour()) // if time changed
+  if (now_time.minute() != last.minute() || now_time.hour() != last.hour()) // if time changed
   {
-    last = now;
+    last = now_time;
     return true;
   }
 
@@ -105,12 +97,12 @@ void Clock::setTime(uint8_t hour, uint8_t minute)
 
 uint8_t Clock::getMinute()
 {
-  return now.minute();
+  return now_time.minute();
 }
 
 uint8_t Clock::getHour()
 {
-  return now.hour();
+  return now_time.hour();
 }
 
 uint8_t Clock::updateButtons()
@@ -127,7 +119,7 @@ uint8_t Clock::updateButtons()
 
 bool Clock::evenSecond()
 {
-  if (now.second() % 2 == 0) return true;
+  if (now_time.second() % 2 == 0) return true;
   else                       return false;
 }
 
@@ -139,11 +131,11 @@ void Clock::setDot(bool state)
 
 bool Clock::display()
 {
-  return this->display(now.hour(), now.minute(), true, true);
+  return display(now_time.hour(), now_time.minute(), true, true);
 }
 
 bool Clock::display(uint8_t hour, uint8_t minute,
-                    bool hour_on = true, bool minute_on = true)
+                    bool hour_on, bool minute_on)
 {
   // test out of bounds
   if (hour > 99 || minute > 99)
@@ -180,28 +172,28 @@ bool Clock::display(uint8_t hour, uint8_t minute,
   shift.batchWriteBegin();
 
   // minute 1
-  shift.writeBit(0, table[m_1][0]);
-  shift.writeBit(1, table[m_1][1]);
-  shift.writeBit(2, table[m_1][2]);
-  shift.writeBit(3, table[m_1][3]);
+  shift.writeBit(0, table[m_1][3]);
+  shift.writeBit(1, table[m_1][2]);
+  shift.writeBit(2, table[m_1][1]);
+  shift.writeBit(3, table[m_1][0]);
 
   // minute 2
-  shift.writeBit(4, table[m_2][0]);
-  shift.writeBit(5, table[m_2][1]);
-  shift.writeBit(6, table[m_2][2]);
-  shift.writeBit(7, table[m_2][3]);
+  shift.writeBit(4, table[m_2][3]);
+  shift.writeBit(5, table[m_2][2]);
+  shift.writeBit(6, table[m_2][1]);
+  shift.writeBit(7, table[m_2][0]);
 
   // hour 1
-  shift.writeBit(8, table[h_1][0]);
-  shift.writeBit(9, table[h_1][1]);
-  shift.writeBit(10, table[h_1][2]);
-  shift.writeBit(11, table[h_1][3]);
+  shift.writeBit(8, table[h_1][3]);
+  shift.writeBit(9, table[h_1][2]);
+  shift.writeBit(10, table[h_1][1]);
+  shift.writeBit(11, table[h_1][0]);
 
   // hour 2
-  shift.writeBit(12, table[h_2][0]);
-  shift.writeBit(13, table[h_2][1]);
-  shift.writeBit(14, table[h_2][2]);
-  shift.writeBit(15, table[h_2][3]);
+  shift.writeBit(12, table[h_2][3]);
+  shift.writeBit(13, table[h_2][2]);
+  shift.writeBit(14, table[h_2][1]);
+  shift.writeBit(15, table[h_2][0]);
 
   shift.batchWriteEnd();
 

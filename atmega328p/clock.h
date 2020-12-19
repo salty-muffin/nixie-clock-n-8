@@ -17,7 +17,7 @@ class Clock
     Shifty shift;
     MCP7940_Class real_time;
 
-    DateTime now;
+    DateTime now_time;
     DateTime last;
 
     Bounce button_1;
@@ -36,7 +36,18 @@ class Clock
     /**
      @brief   creates and instance of clock
     */
-    Clock() : pressed_1(1), pressed_2(2), pressed_3(3) { };
+    Clock() : pressed_1(1), pressed_2(2), pressed_3(3), table {{0, 0, 0, 0},  // 0
+           {0, 0, 0, 1},  // 1
+           {0, 0, 1, 0},  // 2
+           {0, 0, 1, 1},  // 3
+           {0, 1, 0, 0},  // 4
+           {0, 1, 0, 1},  // 5
+           {0, 1, 1, 0},  // 6
+           {0, 1, 1, 1},  // 7
+           {1, 0, 0, 0},  // 8
+           {1, 0, 0, 1},  // 9
+           {1, 1, 1, 1}} // NONE
+           { };
 
     /**
      sets all the pins and debounced switches and connects with rtc
@@ -48,7 +59,7 @@ class Clock
     */
     void init(uint8_t data, uint8_t clock, uint8_t latch, uint8_t dot,
               uint8_t switch_1, uint8_t switch_2, uint8_t switch_3,
-              uint16_t debounce, uint8_t tube_table[][4]);
+              uint16_t debounce);
     /**
      @brief   fetches time from the rtc
 
@@ -84,7 +95,7 @@ class Clock
     /**
      @brief   displays time on nixie tubes
 
-     uses time from the now object in the class
+     uses time from the now_time object in the class
     */
     bool display();
     /**
@@ -95,7 +106,7 @@ class Clock
      @return  returns false if hour or minute out of bounds
     */
     bool display(uint8_t hour, uint8_t minute,
-                 bool hour_on = true, bool minute_on = true);
+                 bool hour_on, bool minute_on);
 };
 
 #endif
