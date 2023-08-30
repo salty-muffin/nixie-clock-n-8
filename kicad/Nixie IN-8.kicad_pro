@@ -45,7 +45,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 1.524
         }
       },
       "diff_pair_dimensions": [
@@ -113,7 +113,7 @@
         "max_error": 0.005,
         "min_clearance": 0.15239999999999998,
         "min_connection": 0.15239999999999998,
-        "min_copper_edge_clearance": 0.30479999999999996,
+        "min_copper_edge_clearance": 0.8128,
         "min_hole_clearance": 0.127,
         "min_hole_to_hole": 0.127,
         "min_microvia_diameter": 0.508,
@@ -174,7 +174,6 @@
       "track_widths": [
         0.0,
         0.2032,
-        0.3048,
         0.4064
       ],
       "via_dimensions": [
@@ -447,10 +446,61 @@
         "line_style": 0,
         "microvia_diameter": 0.0,
         "microvia_drill": 0.0,
-        "name": "GND",
+        "name": "5V1",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(0, 18, 255)",
+        "track_width": 0.4064,
+        "via_diameter": 0.9144,
+        "via_drill": 0.4572,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2032,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.0,
+        "microvia_drill": 0.0,
+        "name": "5V2",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(51, 177, 255)",
+        "track_width": 0.4064,
+        "via_diameter": 0.9144,
+        "via_drill": 0.4572,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2032,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.0,
+        "microvia_drill": 0.0,
+        "name": "GND1",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(0, 0, 0)",
-        "track_width": 0.2032,
+        "track_width": 0.4064,
+        "via_diameter": 0.9144,
+        "via_drill": 0.4572,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2032,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.0,
+        "microvia_drill": 0.0,
+        "name": "GND2",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(51, 51, 49)",
+        "track_width": 0.4064,
         "via_diameter": 0.9144,
         "via_drill": 0.4572,
         "wire_width": 6
@@ -471,23 +521,6 @@
         "via_diameter": 0.6096,
         "via_drill": 0.3048,
         "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2032,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.0,
-        "microvia_drill": 0.0,
-        "name": "POWER",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgb(0, 18, 255)",
-        "track_width": 0.4064,
-        "via_diameter": 0.9144,
-        "via_drill": 0.4572,
-        "wire_width": 6
       }
     ],
     "meta": {
@@ -497,19 +530,15 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "POWER",
-        "pattern": "*5V*"
+        "netclass": "5V1",
+        "pattern": "*5V_1"
       },
       {
         "netclass": "HV",
         "pattern": "*180V"
       },
       {
-        "netclass": "GND",
-        "pattern": "GND2"
-      },
-      {
-        "netclass": "HV",
+        "netclass": "GND1",
         "pattern": "GND1"
       },
       {
@@ -537,8 +566,20 @@
         "pattern": "*C)"
       },
       {
-        "netclass": "POWER",
+        "netclass": "5V1",
         "pattern": "*12V*"
+      },
+      {
+        "netclass": "GND2",
+        "pattern": "GND2"
+      },
+      {
+        "netclass": "5V2",
+        "pattern": "*5V_2"
+      },
+      {
+        "netclass": "5V2",
+        "pattern": "*+5V*"
       }
     ]
   },
