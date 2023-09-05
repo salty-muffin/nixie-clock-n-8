@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 3.2,
-          "height": 5.6,
-          "width": 5.6
+          "height": 6.4,
+          "width": 6.4
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -45,7 +45,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 1.524
+          "min_clearance": 0.30479999999999996
         }
       },
       "diff_pair_dimensions": [
@@ -507,7 +507,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2032,
+        "clearance": 0.4064,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -540,22 +540,6 @@
       {
         "netclass": "GND1",
         "pattern": "GND1"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "*U1*"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "*U2*"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "*U3*"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "*U4*"
       },
       {
         "netclass": "HV",
