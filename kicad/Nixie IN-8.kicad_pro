@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 3.2,
-          "height": 6.0,
-          "width": 6.0
+          "height": 6.4,
+          "width": 6.4
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -45,7 +45,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.30479999999999996
+          "min_clearance": 0.4064
         }
       },
       "diff_pair_dimensions": [
@@ -446,63 +446,12 @@
         "line_style": 0,
         "microvia_diameter": 0.0,
         "microvia_drill": 0.0,
-        "name": "3.3V1",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgb(255, 1, 250)",
-        "track_width": 0.2032,
-        "via_diameter": 0.6096,
-        "via_drill": 0.3048,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2032,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.0,
-        "microvia_drill": 0.0,
-        "name": "3.3V2",
+        "name": "3.3V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgb(255, 126, 240)",
         "track_width": 0.2032,
         "via_diameter": 0.6096,
         "via_drill": 0.3048,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2032,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.0,
-        "microvia_drill": 0.0,
-        "name": "5V1",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgb(0, 18, 255)",
-        "track_width": 0.4064,
-        "via_diameter": 0.9144,
-        "via_drill": 0.4572,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2032,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.0,
-        "microvia_drill": 0.0,
-        "name": "5V2",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgb(51, 177, 255)",
-        "track_width": 0.4064,
-        "via_diameter": 0.9144,
-        "via_drill": 0.4572,
         "wire_width": 6
       },
       {
@@ -555,6 +504,40 @@
         "via_diameter": 0.6096,
         "via_drill": 0.3048,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2032,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.0,
+        "microvia_drill": 0.0,
+        "name": "POWER1",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(0, 18, 255)",
+        "track_width": 0.4064,
+        "via_diameter": 0.9144,
+        "via_drill": 0.4572,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2032,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.0,
+        "microvia_drill": 0.0,
+        "name": "POWER2",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(51, 177, 255)",
+        "track_width": 0.4064,
+        "via_diameter": 0.9144,
+        "via_drill": 0.4572,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -564,48 +547,56 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "5V1",
+        "netclass": "POWER1",
         "pattern": "*5V_1"
       },
       {
         "netclass": "HV",
-        "pattern": "*180V"
+        "pattern": "*170V"
       },
       {
         "netclass": "GND1",
         "pattern": "GND1"
       },
       {
-        "netclass": "HV",
-        "pattern": "Net-(*-Pad2)"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "*C)"
-      },
-      {
-        "netclass": "5V1",
-        "pattern": "*12V*"
+        "netclass": "POWER1",
+        "pattern": "*12V_1"
       },
       {
         "netclass": "GND2",
         "pattern": "GND2"
       },
       {
-        "netclass": "5V2",
+        "netclass": "POWER2",
         "pattern": "*5V_2"
       },
       {
-        "netclass": "5V2",
+        "netclass": "POWER2",
         "pattern": "*+5V*"
       },
       {
-        "netclass": "3.3V1",
-        "pattern": "*3.3V_1"
+        "netclass": "3.3V",
+        "pattern": "*3.3V"
       },
       {
-        "netclass": "3.3V2",
-        "pattern": "*3.3V_2"
+        "netclass": "POWER2",
+        "pattern": "*12V_2"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "*DRAIN*"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(Q1-C)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(R5-Pad2)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(R*-Pad*)"
       }
     ]
   },
