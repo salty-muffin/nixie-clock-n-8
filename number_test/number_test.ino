@@ -3,41 +3,40 @@
 // zeno gries
 
 // libraries -------------------------------------------------------------------
-#include <Metro.h>
 #include <Shifty.h>
 
 // settings -------------------------------------------------------------------
 // bit table for tube driver
-const uint8_t table[16][4] = {{0, 0, 0, 0},  // 0: 
-                              {0, 0, 0, 1},  // 0: 
-                              {0, 0, 1, 0},  // 0: 
-                              {0, 0, 1, 1},  // 0: 
-                              {0, 1, 0, 0},  // 0: 
-                              {0, 1, 0, 1},  // 0: 
-                              {0, 1, 1, 0},  // 0: 
-                              {0, 1, 1, 1},  // 0: 
-                              {1, 0, 0, 0},  // 0: 
-                              {1, 0, 0, 1},  // 0: 
-                              {1, 0, 1, 0},  // 0: 
-                              {1, 0, 1, 1},  // 0: 
-                              {1, 1, 0, 0},  // 0: 
-                              {1, 1, 0, 1},  // 0: 
-                              {1, 1, 1, 0},  // 0: 
-                              {1, 1, 1, 1}}; // 0: 
+const uint8_t table[16][4] = {{0, 0, 0, 0},  // 0:
+                              {0, 0, 0, 1},  // 0:
+                              {0, 0, 1, 0},  // 0:
+                              {0, 0, 1, 1},  // 0:
+                              {0, 1, 0, 0},  // 0:
+                              {0, 1, 0, 1},  // 0:
+                              {0, 1, 1, 0},  // 0:
+                              {0, 1, 1, 1},  // 0:
+                              {1, 0, 0, 0},  // 0:
+                              {1, 0, 0, 1},  // 0:
+                              {1, 0, 1, 0},  // 0:
+                              {1, 0, 1, 1},  // 0:
+                              {1, 1, 0, 0},  // 0:
+                              {1, 1, 0, 1},  // 0:
+                              {1, 1, 1, 0},  // 0:
+                              {1, 1, 1, 1}}; // 0:
 
 // pins ------------------------------------------------------------------------
-const uint8_t DATA  = 2;
-const uint8_t CLOCK = 3;
-const uint8_t LATCH = 4;
+#define DATA    2
+#define CLOCK   3
+#define LATCH   4
 
-const uint8_t DOT = 5;
+#define DOT    17
 
 // objects ---------------------------------------------------------------------
 Shifty shift;
 
 // variables -------------------------------------------------------------------
 uint8_t number = 2;
-boolean dot = false;
+bool dot = true;
 
 void setup()
 {
@@ -52,9 +51,9 @@ void setup()
   shift.setPins(DATA, CLOCK, LATCH);
 
   Serial.println(String(number) + ": " +
-                 String(table[number][0]) + 
-                 String(table[number][1]) + 
-                 String(table[number][2]) + 
+                 String(table[number][0]) +
+                 String(table[number][1]) +
+                 String(table[number][2]) +
                  String(table[number][3]));
 
   shift.batchWriteBegin();
@@ -85,8 +84,10 @@ void setup()
 
   shift.batchWriteEnd();
 
-  if (dot) digitalWrite(DOT, HIGH);
-  else     digitalWrite(DOT, LOW);
+  if (dot)
+    digitalWrite(DOT, HIGH);
+  else
+    digitalWrite(DOT, LOW);
 }
 
-void loop() { }
+void loop() {}
